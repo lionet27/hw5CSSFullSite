@@ -1,0 +1,431 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: blue;
+}
+
+summary {
+  list-style: none;
+}
+
+.box-content {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.center {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+}
+
+#burger {
+  position: absolute;
+  left: -99999px;
+  visibility: hidden;
+}
+#burger:checked ~ .header__right__nav {
+  right: 0;
+}
+
+.header {
+  background-color: #222224;
+  padding-top: 18px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.header__left {
+  display: flex;
+  justify-content: space-between;
+  gap: 41px;
+  align-items: center;
+}
+.header__right {
+  display: flex;
+  justify-content: space-between;
+  gap: 33px;
+  align-items: center;
+}
+.header__right__nav {
+  background: #FFF;
+  box-shadow: 6px 4px 35px;
+  width: 232px;
+  padding: 32px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 79px;
+  right: -1000px;
+  transition: right 0.3s;
+  z-index: 1000;
+}
+.header__right__menu {
+  list-style-type: none;
+  color: #000;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+.header__right__li {
+  list-style-type: none;
+  color: #F16D7F;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+.header__right__limenu {
+  list-style-type: none;
+  color: #6F6E6E;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 21px;
+  margin-top: 11px;
+}
+.header__flex {
+  display: flex;
+  justify-content: space-between;
+}
+.header__icon {
+  width: 44px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+.icon:hover path {
+  fill: blue;
+}
+
+.bredcrums {
+  padding-top: 59px;
+  padding-bottom: 60px;
+  background-color: #F8F3F4;
+}
+.bredcrums__text {
+  color: #F16D7F;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.registraition {
+  padding-top: 64px;
+  padding-bottom: 96px;
+  display: flex;
+  gap: 128px;
+}
+.registraition__form {
+  max-width: 360px;
+}
+.registraition__formInput {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.registraition__formInput_border {
+  border: 1px solid #A4A4A4;
+  outline: #A4A4A4;
+  padding-top: 13px;
+  padding-bottom: 16px;
+  padding-left: 17px;
+}
+.registraition__formTitle {
+  color: #222;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registraition__formGender {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  font-family: Lato;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 33px;
+  margin-top: 31px;
+}
+.registraition__formGenderTipe {
+  vertical-align: middle;
+  margin: 0;
+  color: #A4A4A4;
+  color: #FFF;
+}
+.registraition__formText {
+  margin-top: 15px;
+  margin-bottom: 39px;
+  color: #B1B1B1;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registraition__formButton {
+  background-color: #F16D7F;
+  color: #FFF;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 13px 17px 16px 17px;
+  border: 1px solid #F16D7F;
+}
+.registraition__formButton:hover {
+  color: #F16D7F;
+  background-color: white;
+  transition: 2s;
+}
+.registraition__formSVG {
+  margin-left: 20px;
+}
+.registraition__loyalty {
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 21px;
+}
+.registraition__advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+.registraition__advantage {
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  list-style: none;
+}
+.registraition__advantages > .registraition__advantage {
+  padding-left: 43px;
+  position: relative;
+}
+.registraition__advantages > .registraition__advantage:before {
+  content: "✔";
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+.review {
+  background-image: linear-gradient(180deg, rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(img/Layer41.svg);
+  height: 448px;
+  background-size: cover;
+}
+.review__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review__figure {
+  text-align: center;
+}
+.review__figure__img {
+  margin-top: 97px;
+}
+.review__figure__text {
+  width: 360px;
+  height: 99px;
+  color: #222224;
+  text-align: center;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 30px;
+}
+.review__figure__curs {
+  color: #222224;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+.review__subscribe__text {
+  width: 557px;
+  height: 61px;
+  text-align: center;
+  margin-top: 54px;
+  margin-bottom: 27px;
+}
+.review__subscribe__h {
+  color: #222224;
+  text-align: center;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.review__subscribe__h2 {
+  color: #222224;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.review__subscribe__form {
+  width: 557px;
+  text-align: center;
+}
+.review__subscribe__email {
+  color: #222224;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.671;
+  background-color: #E1E1E1;
+  padding-top: 7px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  border-top-left-radius: 22px;
+  border-bottom-left-radius: 22px;
+  border: 1px solid #E1E1E1;
+  height: 49px;
+  width: 260px;
+}
+.review__subscribe__button {
+  color: #FFF;
+  text-align: center;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #F16D7F;
+  padding: 7px 7px 5px 8px;
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
+  border: 1px solid #F16D7F;
+  height: 49px;
+}
+.review__subscribe__button:hover {
+  color: #F16D7F;
+  background-color: white;
+  transition: 2s;
+}
+
+.above-footer {
+  flex: 1;
+}
+
+.footer {
+  background-color: #222224;
+}
+.footer__flex {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.footer__copyright {
+  color: #FBFBFB;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__links {
+  display: flex;
+  justify-content: space-between;
+  gap: 7px;
+  align-items: center;
+}
+.footer__link1 {
+  width: 32px;
+  height: 32px;
+  background-color: #FFF;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.footer__icon:hover path {
+  fill: #F16D7F;
+}
+
+@media (max-width: 1024px) {
+  .center {
+    padding-left: calc(50% - 366px);
+    padding-right: calc(50% - 366px);
+  }
+  .registraition {
+    padding-top: 40px;
+    gap: 22px;
+  }
+  .registraition__loyalty {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+  .registraition__advantage {
+    font-size: 16px;
+  }
+  .review {
+    padding-top: 64px;
+    padding-bottom: 140px;
+  }
+  .review__flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .center {
+    padding-left: calc(50% - 171px);
+    padding-right: calc(50% - 171px);
+  }
+  .bredcrums {
+    text-align: center;
+  }
+  .registraition {
+    gap: 40px;
+    flex-direction: column;
+  }
+  .review {
+    padding-bottom: 110px;
+  }
+  .review__flex {
+    gap: 59px;
+  }
+}/*# sourceMappingURL=registrationstyle.css.map */

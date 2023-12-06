@@ -1,0 +1,492 @@
+$colorSite:#F16D7F;
+$colorHover:blue;
+$colorHeaderFooter: #222224;
+$widthSite:1140px;
+$colorText:#000;
+$colorRegistration:#A4A4A4;
+
+$fontFamilySite:Lato;
+$widthBurgerMenu:232px;
+$transitionSite:2s;
+
+@mixin flexSBcenter($gap) {
+    display: flex;
+    justify-content: space-between;
+    gap: $gap;
+    align-items: center;
+}
+@mixin flexColumn($gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+   
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+a{
+    color: inherit;
+
+}
+a:hover{
+    color: $colorHover;
+}
+summary{
+    list-style: none;
+}
+
+.box-content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+  
+}
+
+.container {
+    margin: 0 auto;
+    max-width: $widthSite;
+}
+
+.center {
+    padding-left: calc(50% - $widthSite/2);
+    padding-right: calc(50% - $widthSite/2);
+}
+
+
+#burger {
+    position: absolute;
+    left: -99999px;
+    visibility: hidden;
+
+    &:checked ~ .header__right__nav {
+ 
+    right: 0;
+    }
+}
+
+.header {
+    background-color: $colorHeaderFooter;
+    padding-top: 18px;
+    padding-bottom: 20px;
+    position: relative;
+    &__left {
+        @include flexSBcenter(41px);
+    }
+    &__right {
+        @include flexSBcenter(33px);
+
+
+        &__nav{
+            background: #FFF;
+            box-shadow:6px 4px 35px ;
+            
+            width: $widthBurgerMenu;
+            padding: 32px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 79px;
+            right: -1000px;;
+            transition: right .3s;
+            z-index: 1000;
+        }
+        &__menu{
+            list-style-type:none;
+            color: #000;
+            font-family:$fontFamilySite;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 24px;
+
+        }
+        &__li{
+            list-style-type:none;
+            color: #F16D7F;
+            font-family: $fontFamilySite;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 12px;
+            
+        }
+        &__limenu{
+            list-style-type:none;
+            color: #6F6E6E;
+            font-family: $fontFamilySite;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding-left: 21px;
+            margin-top: 11px;
+            
+        }
+    }
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__icon {
+        width: 44px;
+        height: 38px;
+        flex-shrink: 0;
+    }
+}
+
+
+.icon:hover path {
+    fill: $colorHover;
+}
+
+.bredcrums{
+
+    padding-top: 59px;
+    padding-bottom: 60px;
+    background-color: #F8F3F4;
+    
+    &__text{
+        color: $colorSite;
+        font-family: Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+
+
+.registraition{
+    padding-top: 64px;
+    padding-bottom: 96px;
+    display: flex;
+    gap: 128px;
+
+    &__form{
+        max-width: 360px;
+    }
+  
+    &__formInput{
+        @include flexColumn(21px);
+        &_border{
+        border: 1px solid #A4A4A4;
+        outline: $colorRegistration;
+        padding-top:13px;
+        padding-bottom: 16px;
+        padding-left: 17px;
+        }
+    }
+    &__formTitle{
+        color: #222;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+    &__formGender{
+        display: flex;
+        justify-content: left;
+        gap: 20px;
+        font-family: Lato;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 33px;
+        margin-top: 31px;
+       
+    }
+    &__formGenderTipe{
+        vertical-align:middle;
+        margin:0;
+        color: $colorRegistration;
+        color: #FFF;
+
+        
+    }
+    &__formText{
+        margin-top: 15px;
+        margin-bottom: 39px;
+        color: #B1B1B1;
+        font-family: Lato;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+    &__formButton{
+        background-color: $colorSite;
+        color: #FFF;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 13px 17px 16px 17px;
+        border: 1px solid $colorSite;
+        &:hover {
+            color: $colorSite;
+            background-color: white;
+            transition: $transitionSite;
+        }
+
+    }
+    &__formSVG{
+        margin-left: 20px;
+    }
+
+    &__promo{
+             
+    }
+    &__loyalty{
+        font-family: Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;  
+        margin-bottom: 21px;      
+    }
+
+    &__advantages{
+        @include flexColumn(16px);
+       
+        list-style: none;
+    }
+    &__advantage{
+        font-family: Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        list-style: none;
+       
+    }
+
+    &__advantages>&__advantage{
+        padding-left: 43px;
+        position: relative;
+        // margin: 10px;
+    }
+    &__advantages>&__advantage:before{
+        content: '✔';
+        position: absolute; top: 0; left: 0px;
+        
+    }
+
+
+}
+
+.review {
+    background-image: linear-gradient(180deg, rgba(244, 244, 244, 0.70), rgba(244, 244, 244, 0.70)), url(img/Layer41.svg);
+    height: 448px;
+    background-size: cover;
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__figure {
+        text-align: center;
+        &__img {
+            margin-top: 97px;
+        }
+        &__text {
+            width: 360px;
+            height: 99px;
+            color: #222224;
+            text-align: center;
+            font-family: $fontFamilySite;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 30px;
+        }
+        &__curs {
+            color: #222224;
+            font-family: $fontFamilySite;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+    &__subscribe {
+        &__text {
+            width: 557px;
+            height: 61px;
+            text-align: center;
+            margin-top: 54px;
+            margin-bottom: 27px;
+        }
+        &__h {
+            color: #222224;
+            text-align: center;
+            font-family: $fontFamilySite;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        &__h2 {
+            color: #222224;
+            font-family: $fontFamilySite;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        &__form {
+            width: 557px;
+            text-align: center;
+        }
+        &__email {
+            color: #222224;
+            font-family: $fontFamilySite;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            opacity: 0.671;
+            background-color: #E1E1E1;
+            padding-top: 7px;
+            padding-bottom: 6px;
+            padding-left: 22px;
+            border-top-left-radius: 22px;
+            border-bottom-left-radius: 22px;
+            border: 1px solid #E1E1E1;
+            height: 49px;
+            width: 260px;
+        }
+        &__button {
+            color: #FFF;
+            text-align: center;
+            font-family: $fontFamilySite;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            background-color: $colorSite;
+            padding: 7px 7px 5px 8px;
+            border-top-right-radius: 22px;
+            border-bottom-right-radius: 22px;
+            border: 1px solid $colorSite;
+            height: 49px;
+            &:hover {
+                color: $colorSite;
+                background-color: white;
+                transition: $transitionSite;
+            }
+
+        }
+        
+    }
+}
+
+.above-footer{
+    flex:1;
+
+}
+
+.footer {
+    background-color: $colorHeaderFooter;
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__copyright {
+        color: #FBFBFB;
+        font-family: $fontFamilySite;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__links {
+        @include flexSBcenter(7px)
+    }
+    &__link1 {
+        width: 32px;
+        height: 32px;
+        background-color: #FFF;
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    &__icon:hover path {
+        fill: $colorSite;
+    }
+}
+
+@media (max-width:1024px) {
+    .center {
+        padding-left: calc(50% - 366px);
+        padding-right: calc(50% - 366px);
+    }
+    .registraition{
+        padding-top: 40px;
+        gap: 22px;
+        &__loyalty{
+            font-size: 16px;
+            margin-bottom: 32px;      
+        }
+    
+        &__advantage{
+            font-size: 16px;
+        }
+    }
+    
+    .review {
+        padding-top: 64px;
+        padding-bottom: 140px;
+       
+        
+        // background-size: cover;
+        &__flex {
+            // display: flex;
+            // justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+
+@media (max-width:767px) {
+
+    .center {
+        padding-left: calc(50% - 171px);
+        padding-right: calc(50% - 171px);
+    }
+    .bredcrums{
+        text-align: center;
+    }
+
+    .registraition{
+        gap: 40px;
+        flex-direction: column;
+
+    }
+   
+    .review {
+        
+        padding-bottom: 110px;
+       
+        
+        &__flex {
+            gap: 59px;
+        }
+    }
+
+}
