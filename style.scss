@@ -70,12 +70,13 @@ summary{
         &__nav{
             background: #FFF;
             box-shadow:6px 4px 35px ;
-            width: 232px;
+            width: $widthBurgerMenu;
             padding: 32px;
             box-sizing: border-box;
             position: absolute;
             top: 79px;
-            right: -$widthBurgerMenu;
+            right: -1000px;
+            z-index: 100;
             transition: right .3s;
         }
         &__menu{
@@ -245,10 +246,10 @@ summary{
 .products {
     &__grid {
         display: grid;
-        // grid-template-columns: 1fr 1fr 1fr;
-        // grid-template-rows: 2fr 2fr;
+        
         grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
         gap: 30px;
+        justify-items: center;
     }
     &__item {
         width:360px;
@@ -435,7 +436,7 @@ summary{
         padding-top: 53px;
         &__text {
             width: 557px;
-            height: 61px;
+            // height: 61px;
             text-align: center;
                        
             margin-bottom: 27px;
@@ -471,7 +472,7 @@ summary{
             opacity: 0.671;
             background-color: #E1E1E1;
             padding-top: 7px;
-            padding-bottom: 6px;
+            padding-bottom: 5px;
             padding-left: 22px;
             border-top-left-radius: 22px;
             border-bottom-left-radius: 22px;
@@ -587,17 +588,25 @@ summary{
         }
 
     }
+    
     .review {
         padding-top: 64px;
         padding-bottom: 140px;
        
-        
-        // background-size: cover;
+       
         &__flex {
-            // display: flex;
-            // justify-content: space-between;
             flex-direction: column;
             align-items: center;
+        }
+        &__subscribe{
+            &__h {
+                
+                line-height: 162%;
+            }
+            &__h2 {
+               
+                line-height: 162%;
+            }
         }
     }
   
@@ -665,13 +674,31 @@ summary{
 
     }
     .review {
-        
         padding-bottom: 110px;
        
-        
+       
         &__flex {
             gap: 59px;
         }
+        &__subscribe{
+            &__text {
+                width: auto;
+            }
+            &__h {
+                
+                line-height: 153%;
+            }
+            &__h2 {
+               
+                font-size: 14px;
+                line-height: 153%;
+            }
+            &__form {
+                width: 341px;
+               
+            }
+        }
+       
     }
 
 

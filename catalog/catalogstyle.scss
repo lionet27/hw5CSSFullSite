@@ -352,10 +352,9 @@ gap: 18px;
 .products {
     &__grid {
         display: grid;
-        // grid-template-columns: 1fr 1fr 1fr;
-        // grid-template-rows: 2fr 2fr;
         grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
         gap: 30px;
+        justify-items: center;
         
     }
     &__item {
@@ -503,7 +502,6 @@ gap: 18px;
 
 .review {
     background-image: linear-gradient(180deg, rgba(244, 244, 244, 0.70), rgba(244, 244, 244, 0.70)), url(img/Layer41.svg);
-    // height: 448px;
     padding-top: 97px;
     padding-bottom: 126px;
     background-size: cover;
@@ -515,7 +513,7 @@ gap: 18px;
     &__figure {
         text-align: center;
         &__img {
-            
+            // margin-top: 97px;
         }
         &__text {
             width: 360px;
@@ -542,7 +540,7 @@ gap: 18px;
         padding-top: 53px;
         &__text {
             width: 557px;
-            height: 61px;
+            // height: 61px;
             text-align: center;
                        
             margin-bottom: 27px;
@@ -578,7 +576,7 @@ gap: 18px;
             opacity: 0.671;
             background-color: #E1E1E1;
             padding-top: 7px;
-            padding-bottom: 6px;
+            padding-bottom: 5px;
             padding-left: 22px;
             border-top-left-radius: 22px;
             border-bottom-left-radius: 22px;
@@ -665,17 +663,28 @@ gap: 18px;
         }
 
     }
+
     .review {
         padding-top: 64px;
         padding-bottom: 140px;
        
+       
         &__flex {
-            // display: flex;
-            // justify-content: space-between;
             flex-direction: column;
             align-items: center;
         }
+        &__subscribe{
+            &__h {
+                
+                line-height: 162%;
+            }
+            &__h2 {
+               
+                line-height: 162%;
+            }
+        }
     }
+
     .filtersort {
         padding-top: 24px;
         padding-bottom: 40px;
@@ -715,12 +724,33 @@ gap: 18px;
         }
 
     }
+ 
     .review {
-         padding-bottom: 110px;
-               
+        padding-bottom: 110px;
+       
+       
         &__flex {
             gap: 59px;
         }
+        &__subscribe{
+            &__text {
+                width: auto;
+            }
+            &__h {
+                
+                line-height: 153%;
+            }
+            &__h2 {
+               
+                font-size: 14px;
+                line-height: 153%;
+            }
+            &__form {
+                width: 341px;
+               
+            }
+        }
+       
     }
     .menu {
         padding-top: 24px;

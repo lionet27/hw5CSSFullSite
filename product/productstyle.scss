@@ -260,6 +260,7 @@ $fontFamilySite:Lato;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 30px;
+        justify-content: center;
     }
     &__item {
         background-color: #F8F8F8;
@@ -333,7 +334,6 @@ $fontFamilySite:Lato;
 
 .review {
     background-image: linear-gradient(180deg, rgba(244, 244, 244, 0.70), rgba(244, 244, 244, 0.70)), url(img/Layer41.svg);
-    // height: 448px;
     padding-top: 97px;
     padding-bottom: 126px;
     background-size: cover;
@@ -372,15 +372,15 @@ $fontFamilySite:Lato;
         padding-top: 53px;
         &__text {
             width: 557px;
-            height: 61px;
+            // height: 61px;
             text-align: center;
-            
+                       
             margin-bottom: 27px;
         }
         &__h {
             color: #222224;
             text-align: center;
-            font-family: Lato;
+            font-family: $fontFamilySite;
             font-size: 24px;
             font-style: normal;
             font-weight: 700;
@@ -388,7 +388,7 @@ $fontFamilySite:Lato;
         }
         &__h2 {
             color: #222224;
-            font-family: Lato;
+            font-family: $fontFamilySite;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
@@ -400,7 +400,7 @@ $fontFamilySite:Lato;
         }
         &__email {
             color: #222224;
-            font-family: Lato;
+            font-family: $fontFamilySite;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -408,7 +408,7 @@ $fontFamilySite:Lato;
             opacity: 0.671;
             background-color: #E1E1E1;
             padding-top: 7px;
-            padding-bottom: 6px;
+            padding-bottom: 5px;
             padding-left: 22px;
             border-top-left-radius: 22px;
             border-bottom-left-radius: 22px;
@@ -419,7 +419,7 @@ $fontFamilySite:Lato;
         &__button {
             color: #FFF;
             text-align: center;
-            font-family: Lato;
+            font-family: $fontFamilySite;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -490,7 +490,7 @@ $fontFamilySite:Lato;
     }
     .products {
         margin-bottom: 128px;
-        // margin-left: 1%;
+       
         &__grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -502,18 +502,26 @@ $fontFamilySite:Lato;
         }
     }
    
+  
     .review {
         padding-top: 64px;
         padding-bottom: 140px;
        
+       
         &__flex {
-            // display: flex;
-            // justify-content: space-between;
             flex-direction: column;
             align-items: center;
-            gap: 48px;
         }
-        
+        &__subscribe{
+            &__h {
+                
+                line-height: 162%;
+            }
+            &__h2 {
+               
+                line-height: 162%;
+            }
+        }
     }
 
 }
@@ -579,20 +587,31 @@ $fontFamilySite:Lato;
         }
     }
     .review {
-        
         padding-bottom: 110px;
        
-        
+       
         &__flex {
             gap: 59px;
         }
-        &__subscribe {
+        &__subscribe{
             &__text {
-                width: 557px;
-                height: 61px;
-                margin-bottom: 22px;
+                width: auto;
+            }
+            &__h {
+                
+                line-height: 153%;
+            }
+            &__h2 {
+               
+                font-size: 14px;
+                line-height: 153%;
+            }
+            &__form {
+                width: 341px;
+               
             }
         }
+       
     }
     
 }

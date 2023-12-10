@@ -245,7 +245,8 @@ summary {
 
 .review {
   background-image: linear-gradient(180deg, rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(img/Layer41.svg);
-  height: 448px;
+  padding-top: 97px;
+  padding-bottom: 126px;
   background-size: cover;
 }
 .review__flex {
@@ -255,9 +256,6 @@ summary {
 }
 .review__figure {
   text-align: center;
-}
-.review__figure__img {
-  margin-top: 97px;
 }
 .review__figure__text {
   width: 360px;
@@ -279,11 +277,12 @@ summary {
   font-weight: 400;
   line-height: normal;
 }
+.review__subscribe {
+  padding-top: 53px;
+}
 .review__subscribe__text {
   width: 557px;
-  height: 61px;
   text-align: center;
-  margin-top: 54px;
   margin-bottom: 27px;
 }
 .review__subscribe__h {
@@ -317,7 +316,7 @@ summary {
   opacity: 0.671;
   background-color: #E1E1E1;
   padding-top: 7px;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   padding-left: 22px;
   border-top-left-radius: 22px;
   border-bottom-left-radius: 22px;
@@ -341,9 +340,7 @@ summary {
   height: 49px;
 }
 .review__subscribe__button:hover {
-  color: #F16D7F;
-  background-color: white;
-  transition: 2s;
+  color: blue;
 }
 
 .above-footer {
@@ -409,6 +406,12 @@ summary {
     flex-direction: column;
     align-items: center;
   }
+  .review__subscribe__h {
+    line-height: 162%;
+  }
+  .review__subscribe__h2 {
+    line-height: 162%;
+  }
 }
 @media (max-width: 767px) {
   .center {
@@ -427,5 +430,18 @@ summary {
   }
   .review__flex {
     gap: 59px;
+  }
+  .review__subscribe__text {
+    width: auto;
+  }
+  .review__subscribe__h {
+    line-height: 153%;
+  }
+  .review__subscribe__h2 {
+    font-size: 14px;
+    line-height: 153%;
+  }
+  .review__subscribe__form {
+    width: 341px;
   }
 }/*# sourceMappingURL=registrationstyle.css.map */
